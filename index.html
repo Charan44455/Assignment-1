@@ -1,8 +1,31 @@
 <html>
 	<head>
-		<title>hello world</title>
+		<title>Assignmen1</title>
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<link rel="stylesheet" href="main.css">
 	</head>
-	<body>
-		<h1>HELLO WORLD</h1>
+	<body style="text-align:center; background: #C6E2FF;">
+		<div style="margin:8% auto 8% auto; border:1px solid #1E90FF; width:50%; overflow:auto; background: white; box-shadow: 10px 10px 10px grey; border-radius: 15px 15px 15px 15px;">
+			<p id="para1">This is the first paragraph. Click on the below <strong>Change BG Color</strong> button to change the color of the background.</p>
+			<p id="para2">This is the second paragraph. Click on the below <strong>Hide</strong> to hide the content of this paragraph.</p>
+			<p>Thie is the third paragraph. Click on the below <strong>Modal</strong> to see the modal.</p>
+			<p>Thie is the third paragraph. Click on the below <strong>Pop-Up</strong> to see the pop-up message</p>
+			<div style="overflow: auto; width: 61%; margin: 0px auto 10px;">
+				<span id="bgbutton" class="borderModal hoverclass" style="">Change BG Color</span>
+				<span id="hidebutton" class="borderModal hoverclass">Hide</span>
+				<span id="modalbutton"class="borderModal hoverclass" href="#myModal" data-toggle="modal">Modal</span>
+				<span id="popupbutton" class="borderModal hoverclass">Pop-up</span>
+			</div>
+		</div>
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-body">
+				<div class="modal-header"></div>	
+				<p>This is a modal developed using Twitter Bootstrap. Click on the  <strong>Close</strong> to close the Modal</p>
+				<div id="closeDiv"><span id="closeButton" class="borderModal hoverclass" data-dismiss="modal">Close</span></div>
+			</div>
+		</div>
+		<script src="jquery-1.9.1.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>
