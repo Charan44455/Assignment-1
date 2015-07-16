@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Angular</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="namesCtrl" style="text-align:center; background: url('background1.jpg');">
+<nav class="navbar navbar-default">
+    <div class="container-fluid" style="background: black;">
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="#">AnjularJS</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div style="margin:2% auto 2% auto; border:1px solid #1E90FF; width:50%; overflow:auto; background: white; box-shadow: 10px 10px 10px grey; border-radius: 15px 15px 15px 15px; padding-bottom: 30px;">
+    <div >
+        <table style="margin:8% auto 8% auto; border:1px solid #1E90FF; width:60%; height: 400px;">
+            <tr><td colspan="2" style="text-align: center; background-color: #c4e3f3"><Strong>Names Table</Strong></td></tr>
+            <tr>
+                <td style="text-align: center; border:1px solid #1E90FF;"><strong>First Name</strong></td>
+                <td style="text-align: center; border:1px solid #1E90FF;"><strong>Last Name</strong></td>
+            </tr>
+            <tr ng-repeat="x in names">
+                <td style="text-align: center; border:1px solid #1E90FF;">
+                    {{ x.firstname }}
+                </td>
+                <td style="text-align: center; border:1px solid #1E90FF;">
+                    {{ x.lastname }}
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <span id="modalbutton"class="borderModal hoverclass" href="#myModal" data-toggle="modal" style="margin-left: 45%; ">Modal</span>
+</div>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-body">
+        <div class="modal-header"></div>
+        <p>Enter the <strong>First Name</strong> from the <strong>Names</strong> table</p>
+        <p>First Name: <input type="text" ng-model="firstName"></p>
+        <!--Last Name: <input type="text" ng-model="lastName"><br> this also works don't delete-->
+        <p>Last Name: <strong>{{lastName}}</strong> </p>
+
+        <div id="closeDiv"><span id="closeButton" class="borderModal hoverclass" data-dismiss="modal">Close</span></div>
+    </div>
+</div>
+<script src="jquery-1.9.1.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="main.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
